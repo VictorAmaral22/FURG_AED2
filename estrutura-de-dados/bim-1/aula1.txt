@@ -1,0 +1,18 @@
+Ementa da estrutura de dados
+
+- tipos de dados: primitivos, do usuário, enumerações, compostos, abstratos.
+- listas lineares: contiguidade física, encadeadas, circulares
+- Pilhas, filas e deques
+- Tabelas e hash
+- Árvores
+- Grafos
+
+Mapeando da árvore de hierarquia da furg
+
+Reitor
+
+diretor c3                  diretor imef
+
+professores funcionários    professores funcionários
+
+alunos                      alunos

@@ -1,0 +1,8 @@
+Abstração de processos
+
+Tirar a complexidade para simplificar um problema e possibilitar uma solução entendivel para outras pessoas.
+
+Algoritmo de page rank
+
+PR (i) = alfa/N + (1- alfa) Euler PR (j)/L(j)
+
