@@ -1,0 +1,26 @@
+Comparar algoritmos depende do contexto, mas leva em conta duas coias:
+
+- Consumo de tempo
+- Consumo de espaço
+
+Descrever a multiplicação de dois inteiros de tamanho n:
+
+1. Informe qual é o valor que será multiplicado (multiplicando)
+2. Informe qual é o valor que multiplicará (multiplicador)
+3. Pegue o primeiro algarismo da direita do multiplicador
+4. Pegue o primeiro algarismo da direita do multiplicando
+5. Multiplique os dois valores pegos na etapa 3 e 4.
+6. Escreva o resultado da multiplicação alinhado à casa de dezena, unidade, centena, ..., do multiplicando, 
+deixando os números da casa das unidades na linha e reservando o resto para somar com a próxima multiplicação.
+7. Repita as etapas 3, 4 (pegando o próximo algarismo da direita para a esquerda), 5 e 6 
+8. Repita as etapas 3 (pegando o próximo algarismo da direita para a esquerda), 4, 5, 6 (avance os números uma casa para a esquerda) e 7.
+9. Some todas as linhas como uma soma tradicional
+
+Em pseudocódigo, recebe dois vetores de tamanho n, multiplica cada um e armazena em um vetor C
+
+A[1, ..., n]
+B[1, ..., n]
+C[]
+
+MULTIPLICA (A, B)
+    let k = A.comprimento
