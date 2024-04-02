@@ -97,15 +97,32 @@ class chainedList:
         else:
             print("Out of range index")
             return
+        
+    def destroy (self):
+        self.start = None
 
-
+# Criar
 lista = chainedList()
+
+# Populando com dados
 lista.insert(1)
 lista.insert(2)
 lista.insert(5)
+
+# Inserir no index
 lista.insertAt(0, 3)
+
+# Remover posição
 lista.removeAt(2)
+
+# Listar todos elementos
 lista.printAll()
+
+# Elemento na posição
 lista.getByIndex(1)
+
+# Atualizar valor da posição
 lista.updateAt(6, 1)
-lista.printAll()
+
+# Destruir lista
+lista.destroy()
