@@ -3,7 +3,7 @@ class listItem:
         self.value = data,
         self.next = None
 
-class chainedList:
+class linkedList:
     def __init__(self):
         self.start = None
         
@@ -44,7 +44,7 @@ class chainedList:
                 current.next = item
                 return
             else:
-                print("Out of range index")
+                print("Index out of range")
                 return
             
     def updateAt (self, data, index):
@@ -65,7 +65,7 @@ class chainedList:
                 prev.next = item
                 return
             else:
-                print("Out of range index")
+                print("Index out of range")
                 return
 
     def removeAt (self, index):
@@ -95,14 +95,14 @@ class chainedList:
             print(current.value)
             return
         else:
-            print("Out of range index")
+            print("Index out of range")
             return
         
     def destroy (self):
         self.start = None
 
 # Criar
-lista = chainedList()
+lista = linkedList()
 
 # Populando com dados
 lista.insert(1)
@@ -120,6 +120,9 @@ lista.printAll()
 
 # Elemento na posição
 lista.getByIndex(1)
+
+# Posição do valor
+# Faltando
 
 # Atualizar valor da posição
 lista.updateAt(6, 1)
