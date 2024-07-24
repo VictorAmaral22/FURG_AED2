@@ -1,25 +1,3 @@
-class Nodo ():
-    def __init__ (self, valor):
-        self.info = valor
-        self.prox = None
-
-class Pilha:
-    def __init__ (self, valor):
-        self.topo = Nodo(valor)
-
-    def inserir (self, valor):
-        aux = Nodo(valor)
-        aux.prox = self.topo
-        self.topo = aux
-
-    def remover (self):
-        if self.topo != None:
-            self.topo = self.topo.prox
-            return True
-        else:
-            return False
-        
-
 class PilhaC:
     def __init__ (self, max):
         self.topo = None
