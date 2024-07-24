@@ -11,7 +11,7 @@ def sort_fila (fila: FilaEnc):
             if pilhaOrd.topo.info >= elem.info:
                 pilhaOrd.inserir(elem.info)
             else:
-                while pilhaOrd.topo and pilhaOrd.topo.info < elem.info:
+                while pilhaOrd.topo != None and pilhaOrd.topo.info < elem.info:
                     auxTop = pilhaOrd.remover()
                     pilhaAux.inserir(auxTop.info)
 
@@ -33,15 +33,11 @@ def sort_fila (fila: FilaEnc):
 
 fila = FilaEnc()
 
-fila.inserir(7)
-fila.inserir(16)
+fila.inserir(2)
+fila.inserir(5)
+fila.inserir(3)
+fila.inserir(4)
 fila.inserir(1)
-fila.inserir(2)
-fila.inserir(71)
-fila.inserir(2)
-fila.inserir(12)
-fila.inserir(25)
-fila.inserir(11)
 
 sort_fila(fila)
 fila.listarTudo()
