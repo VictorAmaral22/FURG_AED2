@@ -12,7 +12,8 @@ class ListaEnc:
         aux = self.inicio
 
         if aux == None:
-            aux.inicio = Nodo(valor)
+            aux = Nodo(valor)
+            self.inicio = aux
         else:
             while (aux != None):
                 if aux.prox == None:
@@ -39,7 +40,3 @@ class ListaEnc:
             cont += 1
             aux = aux.prox
         return -1
-    
-lista = ListaEnc()
-
-# lista.insert(1)
