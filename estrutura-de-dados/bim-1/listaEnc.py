@@ -42,4 +42,4 @@ class ListaEnc:
     
 lista = ListaEnc()
 
-# lista.insert(1)z
+# lista.insert(1)
