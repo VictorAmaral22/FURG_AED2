@@ -52,4 +52,4 @@ lista.insert("D")
 lista.insert("E")
 
 lista.listarTudo()
-print(lista.buscaRec("D"))
+print(lista.buscaRec("J"))
