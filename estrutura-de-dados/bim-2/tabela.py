@@ -58,4 +58,4 @@ table.inserir("XYZ4567", ["FORD", "FOCUS", 2007, "Carlos"])
 
 print(table.valor("UTY2345"))
 table.excluir("UTY2345")
-print(table.valor("UTY2345"))
+print(table.posicao("ABC1234"))
