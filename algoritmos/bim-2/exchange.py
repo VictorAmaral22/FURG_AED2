@@ -1,5 +1,5 @@
 def exchange (value: int):
-    coins = [100, 25, 10, 5, 1]
+    coins = [100, 10, 25, 5, 1]
     solution = []
     sum = 0
 
@@ -8,9 +8,8 @@ def exchange (value: int):
         x = None
 
         for j in coins:
-            if j + sum <= value:
+            if j + sum <= value and (x is None or (x is not None and j > x)):
                 x = j
-                break
 
         if x is None:
             return "no solution found"
