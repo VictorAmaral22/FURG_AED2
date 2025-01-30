@@ -60,7 +60,7 @@ class Graph:
 
     def __iter__(self):
         return iter(self.vertices.values())
-    
+
 def getLeastValuedEdge(explored, g: Graph, v: Vertex):
     if v is None:
         return None
@@ -132,11 +132,11 @@ def djikstra(g: Graph, start: str, end: str):
     return route
 
 def main():
-    # fin = open("entrada_lista_locais.txt", "r", encoding="utf-8")
-    # fout = open("viagens.txt", "w", encoding="utf-8")
+    fin = open("entrada_lista_locais.txt", "r", encoding="utf-8")
+    fout = open("viagens.txt", "w", encoding="utf-8")
 
-    fin = sys.stdin
-    fout = sys.stdout
+    # fin = sys.stdin
+    # fout = sys.stdout
 
     caseNum = fin.readline().strip()
     if caseNum.isdigit() and int(caseNum) > 0:
@@ -155,7 +155,7 @@ def main():
                     for _ in range(int(conections)):
                         connection = fin.readline().strip().split()
                         if len(connection) < 3:
-                            fout.write("Erro: Conexão inválida")
+                            fout.write("Erro: Conexão inválida\n")
                             continue
                         if connection[0] not in g:
                             g.addVertex(connection[0], connection[0])
@@ -172,15 +172,16 @@ def main():
                             if res:
                                 for i in res["path"]:
                                     fout.write(f"{i['from']} {i['to']} {round(i['cost'], 1)}\n")
-                                fout.write(f"Tempo total: {round(res['cost'], 1)} horas.")
+                                fout.write(f"Tempo total: {round(res['cost'], 1)} horas.\n")
                             else:
-                                fout.write("Não há rota possível.")
+                                fout.write("Não há rota possível.\n")
                         else:
-                            fout.write("Não há rota possível.")
+                            fout.write("Não há rota possível.\n")
             else:
-                fout.write("Erro: Entrada inválida")
+                fout.write("Erro: Entrada inválida\n")
 
     fin.close()
     fout.close()
 
-main()
+if __name__ == "__main__":
+    main()
